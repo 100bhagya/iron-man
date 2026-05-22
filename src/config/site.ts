@@ -1,13 +1,13 @@
 export const siteConfig = {
-  name: "Iron Man",
-  tagline: "Portfolio & Engineering Playground",
+  name: "Saubhagya Gaurav",
+  tagline: "Sofware Entrepreneur",
   description:
     "Personal professional portfolio and interactive engineering playground.",
-  author: "Your Name",
+  author: "Saubhagya",
   links: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    email: "mailto:hello@example.com",
+    github: "https://github.com/100bhagya",
+    linkedin: "https://linkedin.com/in/saubhagya-gaurav",
+    email: "mailto:gauravsaubhagya3@gmail.com",
   },
 } as const;
 

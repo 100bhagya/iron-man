@@ -1,37 +1,37 @@
 [
   {
-    "id": "distributed-cache",
-    "title": "Distributed Cache Layer",
-    "description": "High-throughput caching service with consistent hashing, observability hooks, and graceful degradation under load.",
-    "tags": ["Go", "Redis", "Kubernetes"],
-    "href": "https://github.com",
+    "id": "deep-research",
+    "title": "Deep Research",
+    "description": "An agent driven research tool for finding the best piece of information, papers and articles on any given topic.",
+    "tags": ["Python", "OpenAI", "Gradio"],
+    "href": "https://github.com/100bhagya/deep-research",
     "featured": true,
     "status": "shipped"
   },
   {
-    "id": "design-system",
-    "title": "Internal Design System",
-    "description": "Component library and token pipeline powering multiple product surfaces with accessibility and performance budgets.",
-    "tags": ["React", "TypeScript", "Storybook"],
-    "href": "https://github.com",
+    "id": "ai-resume",
+    "title": "AI Resume",
+    "description": "An intelligent, conversational interface designed to provide real-time, context-aware insights into my professional background.",
+    "tags": ["Python", "RAG", "HuggingFace"],
+    "href": "https://github.com/100bhagya/ai-assistant",
     "featured": true,
     "status": "shipped"
   },
   {
-    "id": "realtime-dashboard",
-    "title": "Realtime Ops Dashboard",
-    "description": "WebSocket-driven operations console for fleet health, incident timelines, and SLO burn-rate visualization.",
-    "tags": ["Next.js", "WebSockets", "D3"],
-    "href": "https://github.com",
+    "id": "lms-dashboard",
+    "title": "Learning Management System",
+    "description": "A full stack learning management system dashboard for managing courses, students, and instructors.",
+    "tags": ["React", "Spring Boot", "PostgreSQL"],
+    "href": "https://github.com/100bhagya/mas-dashboard-backend",
     "featured": false,
     "status": "in-progress"
   },
   {
-    "id": "cli-toolkit",
-    "title": "Engineering CLI Toolkit",
-    "description": "Unified developer CLI for scaffolding services, running integration tests, and publishing internal packages.",
-    "tags": ["Rust", "CLI", "CI/CD"],
-    "href": "https://github.com",
+    "id": "application-tracker",
+    "title": "Application Tracker",
+    "description": "A full stack application that helps keep track of your job application.",
+    "tags": ["Typescript"],
+    "href": "https://github.com/100bhagya/application-tracker",
     "featured": false,
     "status": "experiment"
   }
