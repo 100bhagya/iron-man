@@ -20,7 +20,7 @@ export function HeroSection() {
         </h1>
 
         <p className="text-lg text-muted-foreground sm:text-xl">
-          {siteConfig.description} Explore shipped work, experiments in progress,
+          {siteConfig.introduction} Explore shipped work, experiments in progress,
           and the tools I use to ship reliable software.
         </p>
 

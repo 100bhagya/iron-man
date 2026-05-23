@@ -18,15 +18,8 @@ export default function HomePage() {
           <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
             Selected work
           </h2>
-          <p className="max-w-2xl text-muted-foreground">
-            Projects are managed in{" "}
-            <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-sm text-primary">
-              /data/projects.json
-            </code>
-            . Add entries to grow the portfolio without touching layout code.
-          </p>
         </div>
-
+        
         <ProjectGrid projects={projects} />
       </section>
 
