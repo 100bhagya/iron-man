@@ -15,8 +15,7 @@ export function HeroSection() {
         </p>
 
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-          Building systems with{" "}
-          <span className="text-primary text-glow">precision</span> and craft.
+          <span className="text-primary text-glow">Designing</span> the Future.
         </h1>
 
         <p className="text-lg text-muted-foreground sm:text-xl">

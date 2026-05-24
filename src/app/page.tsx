@@ -32,15 +32,10 @@ export default function HomePage() {
         <div className="rounded-xl border border-border/60 bg-card/50 p-8 sm:p-10">
           <h2 className="text-2xl font-semibold tracking-tight">Writing</h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            Technical articles and case studies will live in{" "}
             <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-sm text-primary">
-              /content
-            </code>{" "}
-            as MDX. A sample post is ready at{" "}
-            <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-sm">
-              content/welcome.mdx
+              Coming soon
             </code>
-            .
+            ...
           </p>
         </div>
       </section>

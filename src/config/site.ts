@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Saubhagya Gaurav",
-  tagline: "Sofware Entrepreneur",
+  tagline: "Software Entrepreneur",
   description:
     "Portfolio of my software endeavours",
   introduction: "Well, hello there! Welcome to my archive of software endeavours. Make yourselves at home and enjoy the interactive engineering playground.",
