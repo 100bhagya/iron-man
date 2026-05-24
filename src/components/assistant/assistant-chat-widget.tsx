@@ -1,16 +1,47 @@
 "use client";
 
 import { MessageCircle, Sparkles, X } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+} from "react";
 
 import { assistantConfig } from "@/config/assistant";
+import { playSoftBell } from "@/lib/play-soft-bell";
 import { cn } from "@/lib/utils";
 
 export function AssistantChatWidget() {
   const [open, setOpen] = useState(false);
+  const userInteractedRef = useRef(false);
 
-  const close = useCallback(() => setOpen(false), []);
-  const toggle = useCallback(() => setOpen((prev) => !prev), []);
+  const close = useCallback(() => {
+    userInteractedRef.current = true;
+    setOpen(false);
+  }, []);
+
+  const toggle = useCallback(() => {
+    userInteractedRef.current = true;
+    setOpen((prev) => !prev);
+  }, []);
+
+  useEffect(() => {
+    if (sessionStorage.getItem(assistantConfig.autoOpenSessionKey) === "true") {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      if (userInteractedRef.current) return;
+
+      sessionStorage.setItem(assistantConfig.autoOpenSessionKey, "true");
+      setOpen(true);
+      playSoftBell();
+    }, assistantConfig.autoOpenDelayMs);
+
+    return () => window.clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -23,6 +54,11 @@ export function AssistantChatWidget() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open, close]);
 
+  const panelStyle = {
+    "--assistant-width": `${assistantConfig.panelWidthPx}px`,
+    "--assistant-height": `${assistantConfig.panelHeightPx}px`,
+  } as CSSProperties;
+
   return (
     <div
       className="fixed right-4 bottom-4 z-50 flex flex-col items-end gap-3 sm:right-6 sm:bottom-6"
@@ -33,11 +69,12 @@ export function AssistantChatWidget() {
         aria-label={assistantConfig.title}
         aria-hidden={!open}
         className={cn(
-          "origin-bottom-right w-[min(850px,calc(100vw-2rem))] transition-all duration-300 ease-out",
+          "origin-bottom-right w-[min(var(--assistant-width),calc(100vw-2rem))] transition-all duration-300 ease-out",
           open
             ? "pointer-events-auto scale-100 opacity-100"
             : "pointer-events-none scale-95 opacity-0"
         )}
+        style={panelStyle}
       >
         <div
           className={cn(
@@ -45,16 +82,16 @@ export function AssistantChatWidget() {
             "bg-card/95 shadow-[0_0_56px_-12px_var(--glow)] backdrop-blur-md"
           )}
         >
-          <header className="flex items-center justify-between gap-3 border-b border-border/60 px-4 py-3">
-            <div className="flex items-center gap-2.5">
-              <span className="flex size-8 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
-                <Sparkles className="size-4" aria-hidden />
+          <header className="flex items-center justify-between gap-2 border-b border-border/60 px-3 py-2.5">
+            <div className="flex min-w-0 items-center gap-2">
+              <span className="flex size-7 shrink-0 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
+                <Sparkles className="size-3.5" aria-hidden />
               </span>
-              <div>
-                <p className="text-sm font-semibold leading-tight">
+              <div className="min-w-0">
+                <p className="truncate text-sm font-semibold leading-tight">
                   {assistantConfig.title}
                 </p>
-                <p className="text-xs text-muted-foreground">
+                <p className="truncate text-xs text-muted-foreground">
                   {assistantConfig.subtitle}
                 </p>
               </div>
@@ -72,9 +109,7 @@ export function AssistantChatWidget() {
           <iframe
             src={assistantConfig.embedUrl}
             title={assistantConfig.title}
-            width={850}
-            height={450}
-            className="h-[min(450px,70vh)] w-full border-0 bg-background"
+            className="h-[min(var(--assistant-height),calc(100dvh-7rem))] w-full border-0 bg-background"
             allow="microphone"
             loading="lazy"
           />
