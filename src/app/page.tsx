@@ -1,3 +1,4 @@
+import { AssistantChatWidget } from "@/components/assistant/assistant-chat-widget";
 import { HeroSection } from "@/components/portfolio/hero-section";
 import { ProjectGrid } from "@/components/portfolio/project-grid";
 import { Separator } from "@/components/ui/separator";
@@ -39,6 +40,8 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      <AssistantChatWidget />
     </>
   );
 }
