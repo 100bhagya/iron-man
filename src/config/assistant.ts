@@ -4,6 +4,6 @@ export const assistantConfig = {
   subtitle: "Ask about my background",
   panelWidthPx: 380,
   panelHeightPx: 560,
-  autoOpenDelayMs: 10_000,
+  autoOpenDelayMs: 5_000,
   autoOpenSessionKey: "assistant-auto-opened",
 } as const;

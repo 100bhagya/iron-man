@@ -10,7 +10,7 @@ import {
 } from "react";
 
 import { assistantConfig } from "@/config/assistant";
-import { playSoftBell } from "@/lib/play-soft-bell";
+import { playSoftBell, unlockAudio } from "@/lib/play-soft-bell";
 import { cn } from "@/lib/utils";
 
 export function AssistantChatWidget() {
@@ -22,9 +22,31 @@ export function AssistantChatWidget() {
     setOpen(false);
   }, []);
 
+  const openAssistant = useCallback(() => {
+    unlockAudio();
+    setOpen(true);
+    requestAnimationFrame(() => playSoftBell());
+  }, []);
+
   const toggle = useCallback(() => {
     userInteractedRef.current = true;
-    setOpen((prev) => !prev);
+    setOpen((prev) => {
+      if (prev) return false;
+      openAssistant();
+      return true;
+    });
+  }, [openAssistant]);
+
+  useEffect(() => {
+    const onInteract = () => unlockAudio();
+    window.addEventListener("pointerdown", onInteract, { passive: true });
+    window.addEventListener("keydown", onInteract);
+    window.addEventListener("scroll", onInteract, { passive: true });
+    return () => {
+      window.removeEventListener("pointerdown", onInteract);
+      window.removeEventListener("keydown", onInteract);
+      window.removeEventListener("scroll", onInteract);
+    };
   }, []);
 
   useEffect(() => {
@@ -36,8 +58,9 @@ export function AssistantChatWidget() {
       if (userInteractedRef.current) return;
 
       sessionStorage.setItem(assistantConfig.autoOpenSessionKey, "true");
+      unlockAudio();
       setOpen(true);
-      playSoftBell();
+      requestAnimationFrame(() => playSoftBell());
     }, assistantConfig.autoOpenDelayMs);
 
     return () => window.clearTimeout(timer);

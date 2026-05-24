@@ -3,7 +3,8 @@ export const siteConfig = {
   tagline: "Software Entrepreneur",
   description:
     "Portfolio of my software endeavours",
-  introduction: "Well, hello there! Welcome to my archive of software endeavours. Make yourselves at home and enjoy the interactive engineering playground.",
+  introduction:
+    "Well, hello there! Welcome to my digital workspace. Make yourselves at home and enjoy the interactive engineering playground. Explore shipped work, experiments in progress, and the tools I use to ship reliable software.",
   author: "Saubhagya",
   links: {
     github: "https://github.com/100bhagya",
