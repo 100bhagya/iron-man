@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { SiteShell } from "@/components/layout/site-shell";
 import { siteConfig } from "@/config/site";
 
+import { Analytics } from "@vercel/analytics/next";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -35,6 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased`}
       >
         <SiteShell>{children}</SiteShell>
+        <Analytics />
       </body>
     </html>
   );
