@@ -84,7 +84,7 @@ export function AssistantChatWidget() {
 
   return (
     <div
-      className="fixed right-4 bottom-4 z-50 flex flex-col items-end gap-3 sm:right-6 sm:bottom-6"
+      className="pointer-events-none fixed right-4 bottom-4 z-50 flex flex-col items-end gap-3 sm:right-6 sm:bottom-6"
       data-assistant-widget
     >
       <div
@@ -95,7 +95,7 @@ export function AssistantChatWidget() {
           "origin-bottom-right w-[min(var(--assistant-width),calc(100vw-2rem))] transition-all duration-300 ease-out",
           open
             ? "pointer-events-auto scale-100 opacity-100"
-            : "pointer-events-none scale-95 opacity-0"
+            : "hidden scale-95 opacity-0"
         )}
         style={panelStyle}
       >
@@ -145,7 +145,7 @@ export function AssistantChatWidget() {
         aria-label={open ? "Close AI Assistant" : "Open AI Assistant"}
         aria-expanded={open}
         className={cn(
-          "relative flex size-14 items-center justify-center rounded-full",
+          "pointer-events-auto relative flex size-14 items-center justify-center rounded-full",
           "border border-primary/40 bg-primary text-primary-foreground",
           "shadow-[0_0_32px_-6px_var(--glow)] transition-all",
           "hover:scale-105 hover:shadow-[0_0_40px_-4px_var(--glow)]",
