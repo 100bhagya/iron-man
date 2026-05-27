@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "vibe-coding",
+    "title": "Vibe Coding",
+    "excerpt": "Vibe coding is shipping AI-generated code on autopilot: it works, so you merge it—no review, no tests, no real ownership. I did it too...",
+    "date": "2026-04-25",
+    "tags": ["AI", "Vibe Coding", "Claude code"],
+    "type": "post",
+    "linkedinUrl": "https://www.linkedin.com/posts/saubhagya-gaurav_youve-probably-done-it-without-realizing-share-7445201748979462144-GGgZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACYEkToBPcM4WMleU-unDie11-NRjerzrww",
+    "content": "## You've probably done it without realizing\n\nYou ask an AI to build something. It works. You ship it.\n\nNo review. No tests. No ownership.\n\nJust vibes.\n\nWelcome to **vibe coding**.\n\n## The turning point\n\nWhen I first started with Claude Code, I was vibe coding too.\n\nThe AI is so fast. The output looks solid. So why slow down?\n\nNext feature. Next feature. Next.\n\nThen I looked at what I'd actually built.\n\nI could explain the product. I could describe what it did.\n\nBut the code itself? There were parts I wouldn't touch with confidence—parts I didn't fully own.\n\nThat hit different.\n\nThat's not engineering. That's outsourcing your understanding.\n\n## The shift that changed everything\n\nI slowed down. Got deliberate.\n\nI started actually reviewing what Claude Code produced, pushing back when something felt off, and staying in control of the architecture and the decisions that matter.\n\nAnd something interesting happened…\n\nThe speed didn't really go down.\n\nBut the quality went way up.\n\nAnd I actually enjoyed the work more.\n\n## The real lesson\n\nYou don't have to choose between moving fast and being a good engineer.\n\nYou just have to be intentional about how you use AI.\n\n## A simple checklist I follow now\n\n- **Read before you run:** skim the diff like you're reviewing a teammate\n- **Ask for trade-offs:** \"Why this approach? What are alternatives?\"\n- **Own the architecture:** keep the mental model, not just the output\n- **Add one guardrail:** a test, a type, or a lint rule that prevents regressions\n- **Refactor for clarity:** make it code you'll be happy to touch next week"
+  },
+  {
+    "slug": "how-twitter-delivers-your-feed",
+    "title": "How Twitter Delivers Your Feed",
+    "excerpt": "How Twitter keeps a personalized feed fast at massive scale—and why the system must stay highly available, low-latency, and efficient...",
+    "date": "2025-07-26",
+    "tags": ["System Design", "Architecture", "Caching"],
+    "type": "article",
+    "mediumUrl": "https://medium.com/@gauravsaubhagya3/how-twitter-delivers-your-feed-af9682199af7",
+    "content": "Twitter offers a wide range of functionalities — from allowing users to post new tweets in various formats such as text, images, and videos, to enabling them to follow others to curate a personalised newsfeed, view tweets from the accounts they follow in their timeline, and search for tweets based on keywords or topics of interest. With the number of daily active users (DAUs) as high as X's, providing these features in the blink of an eye can be a challenging job. You also wouldn't want twitter to go down frequently as it will be \"bad for business\". Long story short, the system should have high availability with minimal latency; and it should be scalable and efficient."
+  },
+  {
+    "slug": "chess-and-software-engineering",
+    "title": "Strategy, Patterns, Risk, Resilience",
+    "excerpt": "After hitting 2000+ rapid on chess.com (peak 2042), I noticed how much chess mirrors engineering: long-term strategy in system design, pattern recognition in architecture, calculated risk in refactors, and resilience under pressure during incidents.",
+    "date": "2026-01-10",
+    "tags": ["Software", "Strategy", "Chess"],
+    "type": "post",
+    "linkedinUrl": "https://www.linkedin.com/posts/saubhagya-gaurav_chess-softwareengineering-strategicthinking-ugcPost-7411731602810155008-x-mg/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACYEkToBPcM4WMleU-unDie11-NRjerzrww",
+    "content": "Earlier this year, I achieved a personal milestone: a rapid rating of 2000+ on chess.com, peaking at 2042. In the process, I couldn't help but notice the compelling parallels between chess and software engineering.\n\nAs a backend engineer myself, I find a surprising amount of overlap between the chessboard and the codebase. Both require:\n\n## The parallels\n\n- **Long-term strategy:** In both chess and system design, you can’t just focus on the next move. You have to build a robust architecture and anticipate how your choices will play out five, ten, or even twenty \"moves\" down the line.\n- **Pattern recognition:** A huge part of improvement in chess is seeing recurring tactical patterns. Similarly, in engineering, identifying and applying design patterns is key to building scalable, maintainable systems.\n- **Calculated risk:** A sacrifice in chess can look reckless, but if it's based on deep calculation, it can be the winning move. It’s no different than making a significant refactoring or architectural shift—it requires careful analysis to ensure the long-term reward is worth the short-term effort.\n- **Resilience under pressure:** Sometimes, the position is tough, and you’re in a time scramble. The ability to stay calm, analyze the core problem, and find the best available solution is a skill that serves you well in both an intense chess game and during a critical system outage.\n\n## Closing\n\nReaching this \"commit\" was a fantastic personal victory. Now, on to the next release (and maybe a new peak rating!).\n\nWhat is a \"high-rating\" skill or hobby outside of work that makes you a better engineer?"
+  }
+]
