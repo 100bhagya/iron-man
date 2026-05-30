@@ -17,4 +17,5 @@ export const mainNav = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/#projects" },
   { label: "Writing", href: "/#writing" },
+  { label: "Deep Research", href: "/deep-research" },
 ] as const;
