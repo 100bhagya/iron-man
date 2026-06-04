@@ -19,7 +19,7 @@ export function SiteFooter() {
         <div className="space-y-1">
           <p className="text-sm font-medium">{siteConfig.name}</p>
           <p className="text-sm text-muted-foreground">
-            © {year} {siteConfig.author}. Built with Next.js & Tailwind.
+            © {year} {siteConfig.author}.
           </p>
         </div>
 
